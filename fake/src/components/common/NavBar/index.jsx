@@ -31,7 +31,7 @@ class NavBar extends Component {
                 className="flex justify-between items-center h-16 px-12 bg-zinc-800 bg-opacity-25 p-10 backdrop-blur-sm">
                 <div>
                     <Typography
-                        variant={"h5"}
+                        variant={"h4"}
                         className="text-white font-bold tracking-wide select-none"
                     >
                         Fake Store
@@ -41,7 +41,7 @@ class NavBar extends Component {
                       aria-label="Nav Tabs" TabIndicatorProps={{style: {background: '#DCD7C9'}}}>
                     <Tab label="Dashboard" component={Link} to={'/dashboard'} sx={{color: '#eceaea'}}/>
                     <Tab label="Product" component={Link} to={'/product'} sx={{color: '#eceaea'}}/>
-                    <Tab label="Cart" component={Link} to={'/dashboard'} sx={{color: '#eceaea'}}/>
+                    <Tab label="Cart" component={Link} to={'/cart'} sx={{color: '#eceaea'}}/>
                 </Tabs>
                 <div className="flex w-1/12 justify-end gap-3">
                     <CommonButton
@@ -75,3 +75,4 @@ class NavBar extends Component {
 }
 
 export default withStyles(styleSheet)(NavBar);
+

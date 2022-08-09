@@ -3,7 +3,7 @@ import {Grid,Typography} from "@mui/material";
 import {Component} from "react";
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
 
-import CommonButton from "../../../components/common/button/index";
+import CommonButton from "../../../components/common/button";
 import {Link} from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";

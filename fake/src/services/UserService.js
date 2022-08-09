@@ -2,17 +2,19 @@ import axios from "../axios";
 import qs from 'qs'
 
 class UserService{
-    postUser = async (data) => {
+
+    addProduct = async (data) => {
         const promise = new Promise((resolve, reject) => {
-            axios.post('users', qs.stringify(data))
-                .then((res) => {
-                    return resolve(res)
-                }).catch((err) => {
+            axios.post('products',data).then((res)=>{
+                return resolve(res)
+            }).catch((err)=>{
                 return resolve(err)
             })
-        });
+        })
         return await promise;
     }
+
+
     deleteUser = async (params) => {
         const promise = new Promise((resolve, reject) => {
             axios.delete('users',{params:params})
@@ -46,15 +48,14 @@ class UserService{
         })
         return await promise;
     }
-    fetchUsers = async (data) => {
+    fetchUsers=async ()=>{
         const promise = new Promise((resolve, reject) => {
-            axios.get('users')
-                .then((res) => {
-                    return resolve(res)
-                }).catch((err) => {
+            axios.get('users').then((res)=>{
+                return resolve(res)
+            }).catch((err)=>{
                 return resolve(err)
             })
-        });
+        })
         return await promise;
     }
 }
