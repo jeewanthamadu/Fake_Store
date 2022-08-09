@@ -8,6 +8,7 @@ import {withStyles} from "@mui/styles";
 import {styleSheet} from "./styles";
 import CommonButton from "../button";
 import {Link} from "react-router-dom";
+import Login from "../../../pages/session/login";
 
 class NavBar extends Component {
     constructor(props) {
@@ -52,32 +53,21 @@ class NavBar extends Component {
                     />
                 </div>
             </nav>
-            {/* <DialogBox title={"Login"} divider open={this.setState}></DialogBox> */}
-            {/* ----  Popup Dialog  ---- */}
 
             <Dialog
                 open={this.state.open}
                 maxWidth="md"
                 classes={{paper: classes.dialogWraper}}
             >
-                <DialogTitle style={{paddingRight: "0px"}}>
-                    <div style={{display: "flex"}}>
-                        <Typography
-                            variant="h4"
-                            component="div"
-                            className="font-bold flex-grow"
-                            style={{flexGrow: 1}}
-                        >
-                            Login
-                        </Typography>
-
+             <DialogTitle className=" items-right " style={{paddingRight: "0px"}}>
+                    <div  className=" " style={{display: "flex"}}>
                         <IconButton onClick={() => this.setState({open: false})}>
                             <CloseIcon/>
                         </IconButton>
                     </div>
                 </DialogTitle>
                 <DialogContent dividers>
-                    {/*<LoginUser />*/}
+                    <Login></Login>
                 </DialogContent>
             </Dialog>
         </AppBar>);

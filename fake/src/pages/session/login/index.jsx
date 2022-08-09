@@ -4,7 +4,9 @@ import {Component} from "react";
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
 
 import CommonButton from "../../../components/common/button/index";
-import Link from "@mui/material/Link";
+import {Link} from "react-router-dom";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 
 
 
@@ -24,11 +26,15 @@ class Login extends Component {
         console.log(this.state.formData);
       };
     
-      handleChange = (event) => {
+      handleChange = (event,newValue) => {
         let id = event.target.name;
+        this.setState({
+          value: newValue
+        });
         switch (id) {
           case "userName":
             const userName = event.target.value;
+
             this.setState(
                 Object.assign(this.state.formData, { userName: userName })
             );
@@ -64,6 +70,7 @@ class Login extends Component {
                 >
                   <Grid container item direction={"column"} gap="20px" alignItems="center" className="">
                     <Typography variant="h3" className="text-black -mt-3">
+
                          Login
                         </Typography>
                     <ValidatorForm
@@ -102,7 +109,7 @@ class Login extends Component {
                         />
     
                         <Typography variant="p">
-                         Create new user account ?  <Link to={"/"} >Register Now</Link>
+                         Create new user account ?  <Link to={"/userRegistration"} >Register Now</Link>
                         </Typography>
                       </Grid>
                     </ValidatorForm>
