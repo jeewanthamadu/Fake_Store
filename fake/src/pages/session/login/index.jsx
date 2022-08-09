@@ -2,8 +2,9 @@ import * as React from 'react';
 import {Grid,Typography} from "@mui/material";
 import {Component} from "react";
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
-import Link from '@mui/material/Link';
+
 import CommonButton from "../../../components/common/button/index";
+import Link from "@mui/material/Link";
 
 
 
@@ -101,7 +102,7 @@ class Login extends Component {
                         />
     
                         <Typography variant="p">
-                         Create new user account ?  <Link>Register Now</Link>
+                         Create new user account ?  <Link to={"/"} >Register Now</Link>
                         </Typography>
                       </Grid>
                     </ValidatorForm>

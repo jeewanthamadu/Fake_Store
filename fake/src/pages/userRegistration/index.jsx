@@ -4,12 +4,13 @@ import {Button, Grid, IconButton, Tooltip, Typography} from "@mui/material";
 import {TextValidator, ValidatorForm} from "react-material-ui-form-validator";
 import CommonDataTable from "../../components/common/table";
 import {withStyles} from "@mui/styles";
-import {styleSheet} from "./style";
+import {styleSheet} from "./styles";
 import CommonButton from "../../components/common/button";
 import Link from '@mui/material/Link';
 
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import CustomSnackBar from "../../components/common/snackBar";
 
 
 class RegisterUser extends Component {
@@ -320,7 +321,7 @@ class RegisterUser extends Component {
 
                     </Grid>
 
-            {/* <CustomSnackBar
+            <CustomSnackBar
                 open={this.state.alert}
                 onClose={() => {
                     this.setState({alert: false})
@@ -329,7 +330,7 @@ class RegisterUser extends Component {
                 autoHideDuration={3000}
                 severity={this.state.severity}
                 variant={'filled'}
-            /> */}
+            />
 
         </>);
     }
