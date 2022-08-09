@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="React Assignment">
+    <output-path>$PROJECT_DIR$/out/artifacts/React_Assignment</output-path>
+    <root id="root">
+      <element id="archive" name="React_Assignment.jar">
+        <element id="module-output" name="React Assignment" />
+      </element>
+    </root>
+  </artifact>
+</component>
